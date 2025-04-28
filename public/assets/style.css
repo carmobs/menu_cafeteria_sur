@@ -1,0 +1,161 @@
+body {
+    font-family: 'Instrument Sans', sans-serif;
+    background-color: #fdfdfc;
+    color: #1b1b18;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    padding: 1rem 2rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-link {
+    font-size: 1rem;
+    margin-right: 1rem;
+}
+
+.nav-link.active {
+    font-weight: bold;
+    color: #ffffff !important;
+}
+
+.welcome-container {
+    padding: 2rem;
+    text-align: center;
+}
+
+.welcome-image {
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.welcome-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #6b21a8;
+}
+
+.welcome-description {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: #6c757d;
+}
+
+.welcome-highlight {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #6b21a8;
+}
+
+.welcome-footer {
+    background-color: #f3e8ff;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+}
+
+.welcome-footer a {
+    text-decoration: none;
+    color: #6b21a8;
+}
+
+.card {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #d1d1d1;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.category-icon {
+    background-color: #f3e8ff;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.category-icon i {
+    color: #6b21a8 !important;
+}
+
+.text-purple {
+    color: #6b21a8 !important;
+}
+
+.btn-purple {
+    background-color: #6b21a8;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-purple:hover {
+    background-color: #5a189a;
+    color: #fff;
+}
+
+.category-card {
+    background-size: cover;
+    background-position: center;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    height: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.vh-100 {
+    height: 100vh;
+}
