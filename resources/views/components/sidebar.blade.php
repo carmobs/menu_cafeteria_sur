@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #6b21a8;">
     <div class="container-fluid">
         <a class="navbar-brand text-white d-flex align-items-center" href="/">
-            <i class="fas fa-coffee me-2"></i> CaféSur
+            <i class="fas fa-coffee me-2"></i> CafeSur
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -19,6 +19,11 @@
                         <a class="nav-link text-white" href="{{ route('login.form') }}"><i class="fas fa-sign-in-alt me-1"></i> Login</a>
                     </li>
                 @else
+                    <li class="nav-item me-2">
+                        <a class="nav-link text-white" href="{{ route('admin.dashboard') }}">
+                            <i class="fas fa-cogs me-1"></i> Panel de Control
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <form action="{{ route('logout') }}" method="POST" class="d-inline">
                             @csrf

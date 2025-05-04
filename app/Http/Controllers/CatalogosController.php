@@ -18,6 +18,6 @@ class CatalogosController extends Controller
     {
         $productos = Productos::where('categoria_id', $categoriaId)->get();
         $categoria = Categorias::findOrFail($categoriaId);
-        return view('catalogos.productos', compact('productos', 'categoria'));
+        return view('catalogos.productos', compact('productos', 'categoria', 'categoriaId')); // Pasar categoriaId
     }
 }

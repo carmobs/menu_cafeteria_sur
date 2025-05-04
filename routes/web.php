@@ -18,6 +18,7 @@ Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::middleware('auth')->group(function () {
+    Route::get('/admin/dashboard', [ProductosController::class, 'dashboard'])->name('admin.dashboard');
     Route::get('/admin/categorias', [CategoriasController::class, 'index'])->name('admin.categorias');
     Route::get('/admin/productos', [ProductosController::class, 'index'])->name('admin.productos');
     Route::post('/admin/categorias/agregar', [CategoriasController::class, 'store'])->name('admin.categorias.agregar');

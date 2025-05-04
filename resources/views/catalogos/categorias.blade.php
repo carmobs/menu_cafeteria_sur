@@ -4,6 +4,9 @@
 
 @section('content')
 <div class="welcome-container">
+    @component('components.breadcrumbs')
+    @endcomponent
+
     <h1 class="welcome-title text-purple">Categorías</h1>
     <p class="welcome-description">Explora nuestras categorías de productos disponibles en CaféSur.</p>
     
