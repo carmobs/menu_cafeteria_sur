@@ -3,27 +3,60 @@
 @section('title', 'Iniciar Sesión - CaféSur')
 
 @section('content')
-<div class="d-flex justify-content-center align-items-center vh-100">
-    <div class="card shadow-sm p-4" style="width: 100%; max-width: 400px;">
-        <h1 class="text-center welcome-title text-purple mb-4">Iniciar Sesión</h1>
-        <p class="text-center welcome-description">Accede como administrador para gestionar productos.</p>
-        <form action="{{ route('login') }}" method="POST" class="mt-4">
-            @csrf
-            <div class="mb-3">
-                <label for="name" class="form-label">Usuario</label>
-                <input type="text" class="form-control" id="name" name="name" required>
+<div class="container">
+    <div class="row justify-content-center min-vh-100 align-items-center">
+        <div class="col-md-5">
+            <div class="login-card">
+                <div class="text-center mb-4">
+                    <div class="login-icon-wrapper">
+                        <i class="fas fa-coffee login-icon"></i>
+                    </div>
+                    <h2 class="welcome-title mb-2">¡Bienvenido!</h2>
+                    <p class="text-muted">Panel de Administración CaféSur</p>
+                </div>
+
+                @if ($errors->has('login'))
+                    <div class="alert alert-danger">
+                        {{ $errors->first('login') }}
+                    </div>
+                @endif
+
+                <form action="{{ route('login') }}" method="POST" class="login-form">
+                    @csrf
+                    <div class="mb-4">
+                        <label for="name" class="form-label">Usuario</label>
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <i class="fas fa-user"></i>
+                            </span>
+                            <input type="text" 
+                                   class="form-control" 
+                                   id="name" 
+                                   name="name" 
+                                   required>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <i class="fas fa-lock"></i>
+                            </span>
+                            <input type="password" 
+                                   class="form-control" 
+                                   id="password" 
+                                   name="password" 
+                                   required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-purple w-100">
+                        <i class="fas fa-sign-in-alt me-2"></i>Iniciar Sesión
+                    </button>
+                </form>
             </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="password" name="password" required>
-            </div>
-            <button type="submit" class="btn btn-purple w-100">Iniciar Sesión</button>
-        </form>
-        @if ($errors->has('login'))
-            <div class="alert alert-danger mt-3">
-                {{ $errors->first('login') }}
-            </div>
-        @endif
+        </div>
     </div>
 </div>
 @endsection
