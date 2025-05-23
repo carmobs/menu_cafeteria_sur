@@ -32,11 +32,11 @@
             </div>
             <div class="col-md-4">
                 <i class="fas fa-envelope mb-2 text-purple fa-2x"></i>
-                <p class="mb-0">info@cafemenu.com</p>
+                <p class="mb-0">cafesur39@gmail.com</p>
             </div>
             <div class="col-md-4">
                 <i class="fas fa-clock mb-2 text-purple fa-2x"></i>
-                <p class="mb-0">Lun - Vie: 7:00 - 19:00</p>
+                <p class="mb-0">Lun - Vie: 10:00 - 17:00</p>
             </div>
         </div>
     </footer>
