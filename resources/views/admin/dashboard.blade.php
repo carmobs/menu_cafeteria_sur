@@ -123,9 +123,20 @@
                         <td>{{ $producto->categoria->nombre }}</td>
                         <td>${{ number_format($producto->precio, 2) }}</td>
                         <td>
-                            <span class="badge {{ $producto->disponible ? 'bg-success' : 'bg-danger' }}">
-                                {{ $producto->disponible ? 'Disponible' : 'No disponible' }}
-                            </span>
+                            <select class="form-select estado-select badge {{ $producto->disponible ? 'bg-success' : 'bg-danger' }}"
+                                    data-id="{{ $producto->id }}"
+                                    style="width: auto; 
+                                           border: none; 
+                                           padding: 6px 12px; 
+                                           -webkit-appearance: none;
+                                           -moz-appearance: none;
+                                           appearance: none;
+                                           cursor: pointer;
+                                           text-align: center;
+                                           min-width: 120px;">
+                                <option value="1" {{ $producto->disponible ? 'selected' : '' }}>Disponible</option>
+                                <option value="0" {{ !$producto->disponible ? 'selected' : '' }}>No disponible</option>
+                            </select>
                         </td>
                         <td>
                             <div class="btn-group">
@@ -194,6 +205,40 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('searchInput').addEventListener('input', filterTable);
     document.getElementById('categoriaFilter').addEventListener('change', filterTable);
     document.getElementById('disponibilidadFilter').addEventListener('change', filterTable);
+
+    // Agregar esto dentro del DOMContentLoaded existente
+    document.querySelectorAll('.estado-select').forEach(select => {
+        select.addEventListener('change', function() {
+            const isDisponible = this.value === '1';
+            this.className = `form-select estado-select badge ${isDisponible ? 'bg-success' : 'bg-danger'}`;
+            
+            // Actualizar el dataset para los filtros
+            this.closest('tr').dataset.disponible = isDisponible ? '1' : '0';
+
+            fetch(`/admin/productos/${this.dataset.id}/toggle-disponibilidad`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+                },
+                body: JSON.stringify({ disponible: isDisponible })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (!data.success) {
+                    throw new Error(data.message);
+                }
+            })
+            .catch(error => {
+                // Revertir en caso de error
+                const revertido = !isDisponible;
+                this.value = revertido ? '1' : '0';
+                this.className = `form-select estado-select badge ${revertido ? 'bg-success' : 'bg-danger'}`;
+                this.closest('tr').dataset.disponible = revertido ? '1' : '0';
+                alert('Error al actualizar el estado: ' + error.message);
+            });
+        });
+    });
 });
 
 // Función para confirmar eliminación

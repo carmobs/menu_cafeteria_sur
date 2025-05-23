@@ -25,6 +25,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/admin/categorias/eliminar/{id}', [CategoriasController::class, 'destroy'])->name('admin.categorias.eliminar');
     Route::post('/admin/productos/agregar', [ProductosController::class, 'store'])->name('admin.productos.agregar');
     Route::delete('/admin/productos/eliminar/{id}', [ProductosController::class, 'destroy'])->name('admin.productos.eliminar');
+    Route::post('/admin/productos/{id}/toggle-disponibilidad', [ProductosController::class, 'toggleDisponibilidad'])->name('productos.toggle-disponibilidad');
     Route::post('/categorias/agregar', [CategoriasController::class, 'store'])->name('categorias.agregar');
     Route::delete('/categorias/eliminar/{id}', [CategoriasController::class, 'destroy'])->name('categorias.eliminar');
     Route::post('/productos/agregar', [ProductosController::class, 'store'])->name('productos.agregar');

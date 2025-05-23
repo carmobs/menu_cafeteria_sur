@@ -626,3 +626,23 @@ body {
     height: 20px;
     width: 150px;
 }
+
+.estado-select {
+    cursor: pointer;
+    font-weight: 500;
+    position: relative;
+    background-image: none !important;
+}
+
+.estado-select:focus {
+    box-shadow: none;
+    border: none;
+}
+
+.estado-select option {
+    background-color: white;
+    color: black;
+    font-weight: normal;
+    text-align: center;
+    padding: 8px;
+}

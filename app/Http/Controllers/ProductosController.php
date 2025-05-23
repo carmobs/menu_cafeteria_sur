@@ -82,4 +82,23 @@ class ProductosController extends Controller
         $categorias = Categorias::all();
         return view('admin.dashboard', compact('productos', 'categorias'));
     }
+
+    public function toggleDisponibilidad(Request $request, $id)
+    {
+        try {
+            $producto = Productos::findOrFail($id);
+            $producto->disponible = $request->disponible;
+            $producto->save();
+            
+            return response()->json([
+                'success' => true,
+                'message' => 'Estado actualizado correctamente'
+            ]);
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Error al actualizar el estado'
+            ], 500);
+        }
+    }
 }
