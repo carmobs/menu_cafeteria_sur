@@ -12,7 +12,7 @@
     
     <div class="row">
         <div class="col-md-4 mb-4">
-            <div class="card shadow-sm category-card" style="background-image: url('{{ secure_asset('assets/imagenes%20categorias/jugos%20y%20licuados.jpg') }}');">
+            <div class="card shadow-sm category-card" style="background-image: url('{{ secure_asset('assets/imagenes%20categorias/Jugos%20y%20licuados.jpg') }}');">
                 <div class="card-overlay">
                     <div class="card-body text-center">
                         <h5 class="card-title text-white">Jugos y Licuados</h5>
@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="col-md-4 mb-4">
-            <div class="card shadow-sm category-card" style="background-image: url('{{ secure_asset('assets/imagenes%20categorias/bebidas.jpg') }}');">
+            <div class="card shadow-sm category-card" style="background-image: url('{{ secure_asset('assets/imagenes%20categorias/Bebidas.jpg') }}');">
                 <div class="card-overlay">
                     <div class="card-body text-center">
                         <h5 class="card-title text-white">Bebidas</h5>
