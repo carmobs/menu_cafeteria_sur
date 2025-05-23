@@ -12,7 +12,7 @@
     
     <div class="row">
         <div class="col-md-4 mb-4">
-            <div class="card shadow-sm category-card" style="background-image: url('{{ asset('assets/imagenes categorias/jugos y licuados.jpg') }}');">
+            <div class="card shadow-sm category-card" style="background-image: url('{{ secure_asset('assets/imagenes%20categorias/jugos%20y%20licuados.jpg') }}');">
                 <div class="card-overlay">
                     <div class="card-body text-center">
                         <h5 class="card-title text-white">Jugos y Licuados</h5>
@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="col-md-4 mb-4">
-            <div class="card shadow-sm category-card" style="background-image: url('{{ asset('assets/imagenes categorias/bebidas.jpg') }}');">
+            <div class="card shadow-sm category-card" style="background-image: url('{{ secure_asset('assets/imagenes%20categorias/bebidas.jpg') }}');">
                 <div class="card-overlay">
                     <div class="card-body text-center">
                         <h5 class="card-title text-white">Bebidas</h5>
@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="col-md-4 mb-4">
-            <div class="card shadow-sm category-card" style="background-image: url('/assets/imagenes categorias/BOWLS.jpeg');">
+            <div class="card shadow-sm category-card" style="background-image: url('{{ secure_asset('assets/imagenes%20categorias/BOWLS.jpeg') }}');">
                 <div class="card-overlay">
                     <div class="card-body text-center">
                         <h5 class="card-title text-white">Bowls</h5>
@@ -45,7 +45,7 @@
             </div>
         </div>
         <div class="col-md-4 mb-4">
-            <div class="card shadow-sm category-card" style="background-image: url('/assets/imagenes categorias/ensaladas.jpeg');">
+            <div class="card shadow-sm category-card" style="background-image: url('{{ secure_asset('assets/imagenes%20categorias/ensaladas.jpeg') }}');">
                 <div class="card-overlay">
                     <div class="card-body text-center">
                         <h5 class="card-title text-white">Ensaladas</h5>
@@ -56,7 +56,7 @@
             </div>
         </div>
         <div class="col-md-4 mb-4">
-            <div class="card shadow-sm category-card" style="background-image: url('/assets/imagenes categorias/tacos.webp');">
+            <div class="card shadow-sm category-card" style="background-image: url('{{ secure_asset('assets/imagenes%20categorias/tacos.webp') }}');">
                 <div class="card-overlay">
                     <div class="card-body text-center">
                         <h5 class="card-title text-white">Tacos</h5>
@@ -67,7 +67,7 @@
             </div>
         </div>
         <div class="col-md-4 mb-4">
-            <div class="card shadow-sm category-card" style="background-image: url('/assets/imagenes categorias/baguettes.jpg');">
+            <div class="card shadow-sm category-card" style="background-image: url('{{ secure_asset('assets/imagenes%20categorias/baguettes.jpg') }}');">
                 <div class="card-overlay">
                     <div class="card-body text-center">
                         <h5 class="card-title text-white">Baguettes</h5>
@@ -78,7 +78,7 @@
             </div>
         </div>
         <div class="col-md-4 mb-4">
-            <div class="card shadow-sm category-card" style="background-image: url('/assets/imagenes categorias/tortas.jpg');">
+            <div class="card shadow-sm category-card" style="background-image: url('{{ secure_asset('assets/imagenes%20categorias/tortas.jpg') }}');">
                 <div class="card-overlay">
                     <div class="card-body text-center">
                         <h5 class="card-title text-white">Tortas</h5>
@@ -89,7 +89,7 @@
             </div>
         </div>
         <div class="col-md-4 mb-4">
-            <div class="card shadow-sm category-card" style="background-image: url('/assets/imagenes categorias/hamburguesa.jpeg');">
+            <div class="card shadow-sm category-card" style="background-image: url('{{ secure_asset('assets/imagenes%20categorias/hamburguesa.jpeg') }}');">
                 <div class="card-overlay">
                     <div class="card-body text-center">
                         <h5 class="card-title text-white">Hamburguesas</h5>
@@ -100,7 +100,7 @@
             </div>
         </div>
         <div class="col-md-4 mb-4">
-            <div class="card shadow-sm category-card" style="background-image: url('/assets/imagenes categorias/sandwich.jpg');">
+            <div class="card shadow-sm category-card" style="background-image: url('{{ secure_asset('assets/imagenes%20categorias/sandwich.jpg') }}');">
                 <div class="card-overlay">
                     <div class="card-body text-center">
                         <h5 class="card-title text-white">Sándwiches</h5>
@@ -111,7 +111,7 @@
             </div>
         </div>
         <div class="col-md-4 mb-4">
-            <div class="card shadow-sm category-card" style="background-image: url('/assets/imagenes categorias/Molletes.jpeg');">
+            <div class="card shadow-sm category-card" style="background-image: url('{{ secure_asset('assets/imagenes%20categorias/Molletes.jpeg') }}');">
                 <div class="card-overlay">
                     <div class="card-body text-center">
                         <h5 class="card-title text-white">Molletes</h5>
@@ -122,7 +122,7 @@
             </div>
         </div>
         <div class="col-md-4 mb-4">
-            <div class="card shadow-sm category-card" style="background-image: url('/assets/imagenes categorias/quesadillas.jpeg');">
+            <div class="card shadow-sm category-card" style="background-image: url('{{ secure_asset('assets/imagenes%20categorias/quesadillas.jpeg') }}');">
                 <div class="card-overlay">
                     <div class="card-body text-center">
                         <h5 class="card-title text-white">Quesadillas</h5>
@@ -133,7 +133,7 @@
             </div>
         </div>
         <div class="col-md-4 mb-4">
-            <div class="card shadow-sm category-card" style="background-image: url('/assets/imagenes categorias/desayuno del dia.jpeg');">
+            <div class="card shadow-sm category-card" style="background-image: url('{{ secure_asset('assets/imagenes%20categorias/desayuno%20del%20dia.jpeg') }}');">
                 <div class="card-overlay">
                     <div class="card-body text-center">
                         <h5 class="card-title text-white">Desayunos</h5>
@@ -144,7 +144,7 @@
             </div>
         </div>
         <div class="col-md-4 mb-4">
-            <div class="card shadow-sm category-card" style="background-image: url('/assets/imagenes categorias/menu del dia.jpeg');">
+            <div class="card shadow-sm category-card" style="background-image: url('{{ secure_asset('assets/imagenes%20categorias/menu%20del%20dia.jpeg') }}');">
                 <div class="card-overlay">
                     <div class="card-body text-center">
                         <h5 class="card-title text-white">Menú del Día</h5>
